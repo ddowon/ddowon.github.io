@@ -1,7 +1,5 @@
 $(function(){
 
-
-
 	var resize = function(){
 		var resize_height = $(window).height();
 		$("section.intro").height(resize_height-300+"px");
@@ -13,16 +11,16 @@ $(function(){
 
 	$(window).on("scroll", function(){
 			var scrollTop = $(window).scrollTop();
-			if(scrollTop > 700) {
-				$(".header").animate({ "right" :"0px"},500);
-				console.log("show")
+			if(!$(this).is(":animated")){
+
+				if(scrollTop > 700) {
+					$(".header").stop().animate({"right" :"0px"});
+				}
+				if(scrollTop < 700) {
+					$(".header").stop().animate({ "right" : "-500px"});
+				}
 			}
-			if(scrollTop < 700) {
-				$(".header").animate({ "right" : "-500px"},500);
-				console.log("hide")
-			}
-				console.log(scrollTop);
-		
+			img_move();
 	});
 	
 	function mouseScroll(){
@@ -50,4 +48,17 @@ $(function(){
 		// $(this).find("img").animate({"top":"0px"},200);
 	// })
 	// 
+
+	function img_move(){
+		var portfolio_offset = $(".portfolio").offset().top;
+		var scrollTop = $(window).scrollTop();
+		var $delay_time = 0;
+		if( scrollTop > portfolio_offset){
+			$(".portfolio .list").find("li").each(function(){
+				TweenMax.to([$(this)], 0.6,  { delay : $delay_time, opacity : 1, x : '-300px' })
+				$delay_time += 0.2;
+			})
+		}
+		
+	}
 })

@@ -166,9 +166,14 @@ section {
 	padding: 0;
 }
 .main .portfolio .list li {
+	
+	position: relative;
+	top:0;
+	left: 300px;
 	margin: 20px 0 ;
 	padding-bottom: 20px;
 	border-bottom: 3px solid #eee;
+	opacity: 0;
 }
 .main .portfolio .list li .img-wrap {
 	position: relative;
