@@ -1,0 +1,208 @@
+html, body,h2{
+	margin: 0;
+	padding: 0;
+	color: #888;
+}
+a { display: inline-block; }
+img {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.wrapper {
+	width: 100%;
+}
+.header {
+	position: fixed;
+	top: 0;
+	right: -500px;
+	width: 25%;
+	min-width:300px;
+	height: 100%;
+	z-index: 10;
+	background-color: pink;
+}
+.header .introduce {
+	margin-top: 100px;
+	text-align: center;
+}
+.header .introduce .img{
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 100px;
+	margin: 0 auto;
+}
+.header .introduce img {
+	width: 150px;
+}
+
+
+.header .introduce .name {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.header .introduce .text {
+	color: rgba(255,255,255,0.7);
+}
+.header .menu {
+	list-style: none;
+	text-align: center;
+	padding-left:0;
+	padding-top: 30px;
+}
+
+.header .menu li a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 12px;
+	font-size: 20px;
+	border-bottom:2px solid lightpink;
+}
+.header .menu li a:hover,
+.header .menu li.active a:hover {
+	background: white;
+	color: lightpink;
+}
+.header .menu li:nth-child(3) a{
+	border-bottom: none;
+}
+
+.main {
+	width: 75%;
+	min-width: 900px;
+}
+
+section {
+	box-sizing: border-box;
+	padding: 150px 150px 150px 200px;
+	border-bottom: 5px solid #eee;
+}
+
+.main .intro {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 800px;
+}
+.main .intro .intro-img {
+	position: absolute;
+	top: 25%;
+	width: 350px;
+	height: 350px;
+	overflow: hidden;
+	display: block;
+	border-radius: 500px;
+}
+.main .intro .intro-img img {
+	position: absolute;
+	top: 0;
+	right: -60px;
+	width: 471px;
+	transform: rotate(90deg);
+}
+.main .intro .intro-text {
+	position: absolute;
+	top: 25%;
+	left: 600px;
+}
+.main .intro .scroll {
+	position: absolute;
+	bottom: 50px;
+	left: 62%;
+	width: 160px;
+	transform: rotate(90deg);
+	border-bottom: 1px solid black;
+}
+@keyframes scrollAnimate {
+	from {
+		bottom : 50px;
+	}
+	to {
+		bottom : 60px;
+	}
+}
+.main h2 {
+	color: lightpink;
+	font-size: 90px;
+}
+
+.main .introduce h3 {
+	color: #777;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.main .skill .content {
+	text-align: center;
+}
+
+
+.main .skill .content img {
+	width: 200px;
+	height: 200px;
+	border-radius: 300px;
+	margin-left: 56px;
+}
+.main .portfolio .img-wrap {
+	width: 400px;
+	height: 270px;
+	overflow: hidden;
+	border: 2px solid lightgray;
+}
+
+.main .portfolio .list {
+	position: relative;
+	list-style: none;
+	padding: 0;
+}
+.main .portfolio .list li {
+	margin: 20px 0 ;
+	padding-bottom: 20px;
+	border-bottom: 3px solid #eee;
+}
+.main .portfolio .list li .img-wrap {
+	position: relative;
+	float: left;
+}
+.main .portfolio .img-wrap img {
+	position: absolute;
+	top:0;
+	width: 400px;
+	transition: all 0.4s;
+}
+
+.main .portfolio li:nth-child(1) .img-wrap:hover img { top: -3px;}
+.main .portfolio li:nth-child(2) .img-wrap:hover img { top: -64px;}
+.main .portfolio li:nth-child(3) .img-wrap:hover img { top: -254px;}
+.main .portfolio li:nth-child(4) .img-wrap:hover img { top: 0px;}
+.main .portfolio li:nth-child(5) .img-wrap:hover img { top: -307px;}
+
+.main .portfolio .img-wrap:hover img {
+}
+.main .portfolio .list li .text {
+	float: left;
+	margin: 20px 0px 0px 40px;
+	width: 340px;
+
+}
+.main .portfolio .list .text .heading {
+	font-size: 25px;
+	font-weight: bold;
+	color : rgb(119, 119, 119);
+}
+
+.main .portfolio .list .text .description {
+	font-size : 18px;
+	line-height: 1.6;
+	color: rgb(136, 136, 136);
+}

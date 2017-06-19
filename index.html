@@ -1,86 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
-		.container{
-			position: relative;
-			height: 100vh;
-			background: lightblue;
-		}
-		button {
-			padding: 1rem;
-			background: transparent;
-			border: 1px solid black;
-		}
-		.modal {
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			display: none;
-			width: 50%;
-			padding: 5rem;
-			border: 2px dashed black;
-			text-align: center;
-			z-index: 10;
-			background: white;
-		}
-
-		.close-modal-btn{
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 1rem;
-		}
-	</style>
-</head>
-
-<body>
-	<div class="container">
-		<h1>Modal-box</h1>
-		<button class="open-modal-btn">Modal</button>
+	<title>신입 UI 개발자 | 김도원</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="http://js.nx.com/s1/fo3/jQuery/core/jquery-1.11.2.min.js"></script>
 	
 
-		<!-- modal -->
-		<div class="modal">
-			<h1>모달창</h1>
-			<p>이것은 모달창 입니다</p>
-			<button class="close-modal-btn" type="button">닫기</button>
+	<script src="js.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="introduce">
+				<div class="img">
+					<img src="img/ddowon.jpg" alt="">
+				</div>
+				<p class="name">김도원</p>
+				<p class="text">	010-6312-3195</p>
+				<p class="text">ddowon2@gmail.com</p>
+			</div>
+			<ul class="menu">
+				<li><a href="#introduce">Introduce</a></li>
+				<li><a href="#skill">Skill</a></li>
+				<li><a href="#portfolio">portfolio</a></li>
+			</ul>
+			<div>
+				<a href="#none"></a>
+				<a href="#none"></a>
+			</div>
+		</header>
+
+
+
+		<div class="main">
+			<section class="intro">	
+				<div class="intro-img">
+					<img src="img/ddowon.jpg" alt="">
+				</div>
+				<div class="intro-text">
+					<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia velit odit fugiat quidem distinctio aliquid .</p>
+				</div>
+				<div class="scroll">	
+					<p>Scroll Down</p>
+				</div>
+			</section>
+			<section class="introduce" id="introduce">
+				<h2>INTRODUCE</h2>
+				<h3>UI Developer</h3>
+				<p>	안녕하세요 ! 항상 새로운 변화를 시도하는 UI개발자 이명종 입니다. UI개발자 라는 직업을 선택하면서 제가 왜 이 직업을 선택했는가 생각해 봅니다. 
+				<br />
+				<br />
+				웹을 디자인하는 웹디자이너도 있고 웹프로그래밍을 하는 웹프로그래머라는 직업이 있는데 왜 UI개발자 라는 직업을 선택 했는지 이제 제 자신에게 물어보려 합니다.
+				<br />
+				<br />
+				청주기계공업고등학교를 졸업한 저는 고등학교 시절 부터 한국산업인력공단에서 주관하는 자기 직종의 기능을 유없이 발휘할 수 있는 기능경기의 기능생 출신 이었습니다. 
+				<br />
+				<br />
+				웹디자인기능생을 하면서 지방기능경기대회 동메달을 입상하여 전국전국기능경기대회에서도 동메달을 입상하고 본격적으로 웹에 재미를 붙여왔습니다. 
+				<br />
+				<br />
+				끝으로, 웹접근성과 UI 를 개발하시는 대한민국 UI개발자들에게 박수를 보냅니다. 감사합니다.</p>
+			</section>
+			<section class="skill" id="skill">
+				<h2>SKILL</h2>
+				<div class="content">	
+					<img src="img/html.png" alt="">
+					<img src="img/css.png" alt="">
+					<img src="img/sass.png" alt="">
+					<img src="img/javascript.png" alt="">
+					<img src="img/jquery.png" alt="">
+				</div>
+			</section>
+			<section class="portfolio" id="portfolio">
+				<h2>PORTFOLIO</h2>
+				<ul class="list">	
+					<li class="clearfix">
+						<a href="https://ddowon.github.io/Homework/kakao/index.html" target="_blank" class="img-wrap">						
+							<img src="img/kakao.png" alt="alt">
+						</a>
+						<div class="text">
+							<p class="heading">Kakao</p>
+							<p class="description"> pc,tablet 환경에 맞게 <br/> 화면이 변하는 반응형 WEB <br/> HTML5의 시맨틱한 태그 사용  <br/> IE 9+, Firefox, Chrome <br/></p>
+						</div>
+
+					</li>
+					<li class="clearfix">
+						<a href="https://ddowon.github.io/Homework/GongGong/main.html" target="_blank" class="img-wrap">						
+							<img src="img/gonggong.png" alt="alt">
+						</a>
+						<div class="text">
+							<p class="heading">GongGong-nuri</p>
+							<p class="description">  <br/>   <br/> <br/> IE 9+, Firefox, Chrome</p>
+						</div>
+					</li>
+					<li class="clearfix">
+						<a href="https://ddowon.github.io/Homework/indulge/index_px.html" target="_blank"  class="img-wrap">
+							<img src="img/indulge.png" alt="alt">
+						</a>
+						<div class="text">
+							<p class="heading">Indulge</p>
+							<p class="description"> PC, Tablet, Moblie에 맞게 화면이 변하는 반응형 WEB<br/> IE 9+, Firefox, Chrome </p>
+						</div>
+					</li>
+					<li class="clearfix">
+						<a href=" https://ddowon.github.io/Homework/Control-text-size/control-text-size.html" target="_blank"  class="img-wrap">
+							<img src="img/text.png" alt="alt">
+						</a>
+						<div class="text">
+							<p class="heading">text-control</p>
+							<p class="description">글자크기와, 굵기 그리고 배경색을 <br/>조절할 수 있는 페이지 <br/> 접근성을 고려하여 키보드로도 작업이 <br/>가능하도록 제작</p>
+						</div>
+					</li>
+					<li class="clearfix">
+						<a href="https://github.com/ddowon/TIL/tree/master/JavaScript/Quiz" target="_blank"  class="img-wrap">
+							<img src="img/js.png" alt="alt">
+						</a>
+						<div class="text">
+							<p class="heading">javascript 알고리즘문제풀기</p>
+							<p class="description">다양한 알고리즘 문제를 <br/>풀어봄으로써 <br/>Javascript 알고리즘을 이해<br/>타인의 코드를 보며 <br/>
+나의 코드를 refactoring </p>
+						</div>
+					</li>
+				</ul>
+			</section>
+
 		</div>
-
-
-
-		<section>
-			<h2 class="header">heading2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus laborum in, beatae vitae quibusdam aliquam provident repudiandae nostrum ex enim minus adipisci perspiciatis nesciunt dolorem dolorum tenetur iste! Laborum.</p>
-		</section>
-		<section>
-			<h2 class="header">heading2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus laborum in, beatae vitae quibusdam aliquam provident repudiandae nostrum ex enim minus adipisci perspiciatis nesciunt dolorem dolorum tenetur iste! Laborum.</p>
-		</section>
-		<section>
-			<h2 class="header">heading2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus laborum in, beatae vitae quibusdam aliquam provident repudiandae nostrum ex enim minus adipisci perspiciatis nesciunt dolorem dolorum tenetur iste! Laborum.</p>
-		</section>
-		<section>
-			<h2 class="header">heading2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus laborum in, beatae vitae quibusdam aliquam provident repudiandae nostrum ex enim minus adipisci perspiciatis nesciunt dolorem dolorum tenetur iste! Laborum./p>
-		</section>
-		<section>
-			<h2 class="header">heading2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus laborum in, beatae vitae quibusdam aliquam provident repudiandae nostrum ex enim minus adipisci perspiciatis nesciunt dolorem dolorum tenetur iste! Laborum.</p>
-		</section>
-		<section>
-			<h2 class="header">heading2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus laborum in, beatae vitae quibusdam aliquam provident repudiandae nostrum ex enim minus adipisci perspiciatis nesciunt dolorem dolorum tenetur iste! Laborum.</p>
-		</section>
 	</div>
-	<script src="js/modal.js"></script>
 </body>
 </html>
