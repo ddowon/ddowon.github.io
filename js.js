@@ -55,7 +55,7 @@ $(function(){
 		var $delay_time = 0;
 		if( scrollTop > portfolio_offset){
 			$(".portfolio .list").find("li").each(function(){
-				TweenMax.to([$(this)], 0.6,  { delay : $delay_time, opacity : 1, x : '-300px' })
+				TweenMax.to([$(this)], 1,  { delay : $delay_time, opacity : 1, x : '-300px' })
 				$delay_time += 0.2;
 			})
 		}
