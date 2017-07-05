@@ -50,7 +50,7 @@ $(function(){
 	// 
 
 	function img_move(){
-		var portfolio_offset = $(".portfolio").offset().top;
+		var portfolio_offset = $(".portfolio").offset().top - 200;
 		var scrollTop = $(window).scrollTop();
 		var $delay_time = 0;
 		if( scrollTop > portfolio_offset){
@@ -62,9 +62,9 @@ $(function(){
 		
 	}
 
-	var $quick = $(".quick");
+	var $quick = $(".nav");
 
-		$quick.find(".menu li").on("click", function(){
+		$quick.find(".nav-list li").on("click", function(){
 			var index = $(this).index();
 
 			if( index == 0 ){
